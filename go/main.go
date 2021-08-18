@@ -239,6 +239,7 @@ func init() {
 }
 
 func main() {
+	log.Printf("start!")
 	// Echo instance
 	e := echo.New()
 	e.Debug = true
@@ -285,6 +286,7 @@ func main() {
 }
 
 func initialize(c echo.Context) error {
+
 	sqlDir := filepath.Join("..", "mysql", "db")
 	paths := []string{
 		filepath.Join(sqlDir, "0_Schema.sql"),
