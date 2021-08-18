@@ -239,7 +239,7 @@ func init() {
 }
 
 func main() {
-	log.Printf("start!")
+
 	// Echo instance
 	e := echo.New()
 	e.Debug = true
@@ -283,6 +283,7 @@ func main() {
 	// Start server
 	serverPort := fmt.Sprintf(":%v", getEnv("SERVER_PORT", "1323"))
 	e.Logger.Fatal(e.Start(serverPort))
+	log.Printf("start!")
 }
 
 func initialize(c echo.Context) error {
